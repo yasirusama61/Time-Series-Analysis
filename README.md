@@ -12,27 +12,23 @@ This repository contains code and data for time series forecasting using ARIMA a
    - The LSTM model is used to predict time series data, while PSO improves model performance by adjusting weights.
 
 ## Files in the Repository
-- **\`furniture_sales_arima.py\`**: Python script for ARIMA time series forecasting.
-- **\`PSO-LSTM.py\`**: Python script implementing PSO optimization for LSTM models.
-- **\`data/\`**: Folder containing the datasets used in the project.
+- `furniture_sales_arima.py`: Python script for ARIMA time series forecasting.
+- `PSO-LSTM.py`: Python script implementing PSO optimization for LSTM models.
+- `data/`: Folder containing the datasets used in the project.
 
 ## How to Run the Code
 1. Clone the repository:
-   \`\`\`bash
-   git clone https://github.com/yasirusama61/Time-Series-Analysis.git
-   \`\`\`
+   - `git clone https://github.com/yasirusama61/Time-Series-Analysis.git`
+  
 2. Install the required dependencies:
-   \`\`\`bash
-   pip install -r requirements.txt
-   \`\`\`
+   - `pip install -r requirements.txt`
+   
 3. Run the ARIMA model:
-   \`\`\`bash
-   python furniture_sales_arima.py
-   \`\`\`
+   - `python furniture_sales_arima.py`
+   
 4. Run the PSO-LSTM model:
-   \`\`\`bash
-   python PSO-LSTM.py
-   \`\`\`
+   - `python PSO-LSTM.py`
+   
 
 ## Data
 The data used for these models comes from a dataset of furniture sales over several years. The data is processed and cleaned in the respective Python scripts.
@@ -40,19 +36,18 @@ The data used for these models comes from a dataset of furniture sales over seve
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-EOL
 
 # Step 3: Stage the changes
-echo "Staging changes..."
-git add README.md
+- `echo "Staging changes..."`
+- `git add README.md`
 
 # Step 4: Commit the changes
-echo "Committing changes..."
-git commit -m "Updated README.md with project details"
+- `echo "Committing changes..."`
+- `git commit -m "Updated README.md with project details"`
 
 # Step 5: Push the changes to GitHub
-echo "Pushing changes to GitHub..."
-git push origin main
+- `echo "Pushing changes to GitHub..."`
+- `git push origin main`
 
 # Step 6: Completion message
-echo "README.md updated and changes pushed to GitHub successfully."
+- `echo "README.md updated and changes pushed to GitHub successfully."`
