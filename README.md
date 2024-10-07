@@ -1,16 +1,3 @@
-#!/bin/bash
-
-# Step 1: Check if README.md exists, if not create it
-if [ ! -f README.md ]; then
-    echo "README.md not found, creating the file..."
-    touch README.md
-fi
-
-# Step 2: Update README.md with content
-echo "Adding content to README.md..."
-cat > README.md <<EOL
-# Time Series Analysis Project
-
 ## Project Overview
 This repository contains code and data for time series forecasting using ARIMA and PSO-LSTM models. The main objective is to predict sales data and optimize model performance using Particle Swarm Optimization (PSO) with Long Short-Term Memory (LSTM) neural networks.
 
