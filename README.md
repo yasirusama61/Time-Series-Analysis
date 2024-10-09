@@ -140,6 +140,21 @@ During the development of the LSTM model, hyperparameter tuning was performed to
 | Training Loss                       | 0.0153           |
 | Validation Loss                     | 0.0198           |
 
+### Model Loss Curve
+
+The following plot shows the Training and Validation loss over 500 epochs:
+
+![Model Loss Curve](results/pso_lstm_loss_curve.png)
+
+### Insights
+
+- **Convergence:** Both the training and validation loss decrease significantly during the initial epochs, indicating that the model is learning effectively and reducing errors.
+- **Stabilization:** After around 30-40 epochs, the losses begin to stabilize, suggesting that the model has reached a plateau and is no longer making substantial improvements.
+- **Close Gap Between Training and Validation Loss:** The training and validation losses remain close throughout the training process, indicating good generalization and minimal overfitting.
+- **Validation Loss Trends:** The slight fluctuations in the validation loss suggest some variations in performance on the validation set, but the overall trend remains consistent with the training loss.
+
+These observations suggest that the model is well-tuned and exhibits a good balance between fitting the training data and generalizing to unseen validation data.
+
 ### LSTM Model Comparison
 
 The figure below compares the predictions made by Univariate and Multivariate LSTM models against the actual heavy metal concentration.
