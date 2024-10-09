@@ -77,7 +77,7 @@ Below is a flowchart illustrating the stages of wastewater treatment and measure
    - `python scripts/hyperparameter_optimization.py`
 
 ## Data
-The data used in this project was provided by the third and consists of industrial wastewater records. The dataset includes features such as:
+The data used in this project was collected from an industrial wastewater treatment facility in collaboration with a company specializing in environmental protection and energy-saving technologies. The dataset includes features such as:
 
    - Heavy Metal Concentration (mg/L)
    - Heavy Metal Input Concentration (mg/L)
@@ -197,3 +197,7 @@ While both models demonstrated similar overall accuracy, the LSTM model's abilit
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+This project was conducted as part of a master's thesis in collaboration with a leading company in the environmental protection and energy-saving sector, and with guidance from Professor Huang Hao, Yuan Ze University. 
+The original dataset was modified to protect proprietary information, following advice from the project supervisor.
