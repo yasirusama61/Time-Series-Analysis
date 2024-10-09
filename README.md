@@ -98,16 +98,41 @@ PSO is a population-based optimization algorithm inspired by the social behavior
 
 ![PSO Algorithm](results/pso_algorithm.png)
 
-
-
 ## Evaluation Metrics
 
 The models are evaluated using the following metrics:
-   - Mean Squared Error (MSE)
-   - Mean Absolute Error (MAE)
-   - Mean Squared Logarithmic Error (MSLE)
-   - R-Squared (R²)
 
+### 1. Mean Squared Error (MSE)
+MSE measures the average squared difference between the predicted and actual values:
+
+\[
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2
+\]
+
+where \( \hat{y}_i \) is the predicted value, \( y_i \) is the actual value, and \( n \) is the number of observations.
+
+### 2. Mean Absolute Error (MAE)
+MAE measures the average absolute difference between the predicted and actual values:
+
+\[
+\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |\hat{y}_i - y_i|
+\]
+
+### 3. Mean Squared Logarithmic Error (MSLE)
+MSLE measures the average squared difference between the logarithms of the predicted and actual values:
+
+\[
+\text{MSLE} = \frac{1}{n} \sum_{i=1}^{n} (\log(1 + \hat{y}_i) - \log(1 + y_i))^2
+\]
+
+### 4. R-Squared (R²)
+R-Squared represents the proportion of variance in the dependent variable that is predictable from the independent variables:
+
+\[
+R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+\]
+
+where \( \bar{y} \) is the mean of the actual values.
 
 
 ## Results
