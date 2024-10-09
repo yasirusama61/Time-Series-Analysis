@@ -79,11 +79,16 @@ The models are evaluated using the following metrics:
    - R-Squared (R²)
 
 ## Results
-Results, including performance metrics and plots, are stored in the `results/ folder`:
+Results, including performance metrics and plots, are stored in the `results/` folder:
 
-   - ARIMA Forecast: Shows the model's ability to capture trends and seasonality.
-   - PSO-LSTM Performance: Visualizations such as training loss curves and predicted vs. actual plots.
-   - Evaluation Metrics: A file summarizing the MSE, MAE, and R² scores for both models.
+   - **ARIMA Forecast**: Shows the model's ability to capture trends and seasonality.
+   - **PSO-LSTM Performance**: Visualizations such as training loss curves and predicted vs. actual plots.
+   - **Evaluation Metrics**: A file summarizing the MSE, MAE, and R² scores for both models.
+   - **Sensitivity Analysis**: A plot showing the influential parameters identified through sensitivity analysis.
+
+### Sensitivity Analysis Plot
+![Sensitivity Analysis Plot](plots/sensitivity_analysis_plot.png)
+
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
