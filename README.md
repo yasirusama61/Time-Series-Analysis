@@ -77,7 +77,8 @@ Below is a flowchart illustrating the stages of wastewater treatment and measure
    - `python scripts/hyperparameter_optimization.py`
 
 ## Data
-The data used in this project was collected from an industrial wastewater treatment facility in collaboration with a company specializing in environmental protection and energy-saving technologies. The dataset includes features such as:
+
+The data used in this project was collected from an industrial wastewater treatment facility in collaboration with a company specializing in environmental protection and energy-saving technologies. Due to confidentiality agreements, the original dataset cannot be publicly shared. However, the analysis conducted in this project utilized features such as:
 
    - Heavy Metal Concentration (mg/L)
    - Heavy Metal Input Concentration (mg/L)
@@ -86,7 +87,8 @@ The data used in this project was collected from an industrial wastewater treatm
    - pH_ORP (Oxidation-Reduction Potential)
    - Chemical Dosage Levels (Chemical A and B)
 
-The original dataset is stored in the `data/heavy_metal_data.xlsx` file, and preprocessed data can be found in `data/processed_data.csv`.
+For privacy reasons, certain sensitive details have been anonymized or modified in the dataset used for analysis. The original raw data is not included in the repository. Only code and scripts for data processing, model training, and evaluation are provided.
+
 
 ### Optimization Techniques
 
