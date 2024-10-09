@@ -29,7 +29,6 @@ Below is a flowchart illustrating the stages of wastewater treatment and measure
    4. Generate forecasts using the fitted model
    5. Evaluate model performance using error metrics like MSE, MAE
 
-
 ### 2. **PSO-LSTM (Particle Swarm Optimization - Long Short-Term Memory)**
    - A hybrid model combining LSTM networks for capturing long-term dependencies in time series data and PSO for optimizing model hyperparameters.
    - Features such as pH, chemical dosage, redox potential, and conductivity were used as input variables to predict future concentrations of heavy metals.
@@ -161,6 +160,37 @@ In this project, both ARIMA (AutoRegressive Integrated Moving Average) and LSTM 
 
 ![ARIMA vs. LSTM Comparison](results/arima_vs_lstm_comparison.png)
 
+# Performance Metrics
+
+## Table 19. Predictive Index of Heavy Metal Concentration
+
+         | Methodology      | Prediction Average | Prediction MSE | Prediction MAE | Prediction MSLE | R Square |
+         |------------------|--------------------|----------------|----------------|-----------------|----------|
+         | PSO-LSTM         | 0.048              | 0.021          | 0.064          | 0.0069          | 85%      |
+         | LSTM             | 0.049              | 0.01           | 0.096          | 0.0025          | 85%      |
+         | PSO-ARIMA        | 0.125              | 0.053          | 0.025          | 0.0373          | 90%      |
+         | Univariate LSTM  | 0.120              | 0.02           | 0.07           | 0.0015          | 98%      |
+
+### Key Observations:
+   - PSO-LSTM and LSTM models show similar R² values of 85%, indicating comparable accuracy in explaining the variance in the data. However, the LSTM has a lower MSE, suggesting it has smaller prediction errors on average.
+   - PSO-ARIMA performs better in terms of R² (90%) but shows a higher MSE and MSLE, suggesting that while it captures the trend well, its prediction errors may be larger than the LSTM models.
+   - Univariate LSTM has the highest R² at 98%, indicating that it explains almost all the variability in the data. It also has the lowest MSLE, making it the best performer in terms of logarithmic error.
+
+## Table 18. Performance Metric of Comparison Between All Methods
+
+         | Analytical Methods | Training MSE | Testing MSE | MAE   | MSLE   |
+         |--------------------|--------------|-------------|-------|--------|
+         | PSO-LSTM           | 0.048        | 0.020       | 0.064 | 0.0069 |
+         | PSO-ARIMA          | 0.238        | 0.238       | 0.025 | 0.0373 |
+         | Grid Search        | 0.203        | 0.139       | 0.096 | 0.0025 |
+         | LSTM               | 0.203        | 0.139       | 0.096 | 0.0025 |
+
+### Key Observations:
+   - PSO-LSTM shows the lowest testing MSE (0.020), indicating strong generalization to new data compared to other methods.
+   - PSO-ARIMA has a significantly higher MSE, both in training and testing, which may indicate overfitting or difficulty in capturing the complexity of the data.
+   - Grid Search LSTM and the plain LSTM models exhibit similar performance, with moderate testing MSE and MAE values. Both models have the lowest MSLE among all methods, highlighting their ability to handle smaller relative errors effectively.
+
+![ Performance Metric Comparison](results/metrics.png)
 
 ### Conclusion
 While both models demonstrated similar overall accuracy, the LSTM model's ability to handle non-linear relationships and rapid changes in data makes it a slightly better choice for this time series forecasting task. The combination of ARIMA and LSTM can also be considered for future work to leverage the strengths of both models.
