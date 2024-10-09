@@ -78,7 +78,7 @@ PSO is a population-based optimization algorithm inspired by the social behavior
 
 ### Algorithm: Particle Swarm Optimization
 
-![PSO Algorithm](plots/pso_algorithm.png)
+![PSO Algorithm](results/pso_algorithm.png)
 
 ## Evaluation Metrics
 
@@ -102,8 +102,8 @@ Results, including performance metrics and plots, are stored in the `results/` f
 
 ## Hyperparameter Optimization
 
-![Batch Size Tuning](plots/batch_size_rmse.png)
-![Block Number Tuning](plots/block_number_rmse.png)
+![Batch Size Tuning](results/batch_size_rmse.png)
+![Block Number Tuning](results/block_number_rmse.png)
 
 During the development of the LSTM model, hyperparameter tuning was performed to achieve the optimal settings for better prediction accuracy. The table below summarizes the optimal hyperparameter values used in the final model:
 
@@ -124,10 +124,10 @@ During the development of the LSTM model, hyperparameter tuning was performed to
 
 The figure below compares the predictions made by Univariate and Multivariate LSTM models against the actual heavy metal concentration.
 
-![LSTM Comparison](plots/lstm_comparison.png)
+![LSTM Comparison](results/lstm_comparison.png)
 
 ### Sensitivity Analysis Plot
-![Sensitivity Analysis Plot](plots/sensitivity_analysis_plot.png)
+![Sensitivity Analysis Plot](results/sensitivity_analysis_plot.png)
 
 ### ARIMA vs. LSTM Performance
 In this project, both ARIMA (AutoRegressive Integrated Moving Average) and LSTM (Long Short-Term Memory) models were employed to forecast the heavy metal concentration in wastewater. The results were compared to evaluate the effectiveness of each model in time series forecasting:
@@ -138,7 +138,7 @@ In this project, both ARIMA (AutoRegressive Integrated Moving Average) and LSTM 
 
 - **Comparison Plot**: The plot below compares the predictions of ARIMA and LSTM against the actual heavy metal concentration values. Both models closely follow the actual trends, but LSTM shows a slight edge in accuracy, especially during rapid changes in concentration.
 
-![ARIMA vs. LSTM Comparison](plots/arima_vs_lstm_comparison.png)
+![ARIMA vs. LSTM Comparison](results/arima_vs_lstm_comparison.png)
 
 
 ### Conclusion
