@@ -117,6 +117,20 @@ The figure below compares the predictions made by Univariate and Multivariate LS
 ### Sensitivity Analysis Plot
 ![Sensitivity Analysis Plot](plots/sensitivity_analysis_plot.png)
 
+### ARIMA vs. LSTM Performance
+In this project, both ARIMA (AutoRegressive Integrated Moving Average) and LSTM (Long Short-Term Memory) models were employed to forecast the heavy metal concentration in wastewater. The results were compared to evaluate the effectiveness of each model in time series forecasting:
+
+- **ARIMA Model**: The ARIMA model demonstrated the capability to capture linear patterns in the time series data. It performed well for predicting the general trend and seasonality of the heavy metal concentration. However, ARIMA struggled with rapid fluctuations and non-linear relationships within the dataset, leading to some inaccuracies during sudden changes.
+
+- **LSTM Model**: The LSTM model, with its ability to learn long-term dependencies and handle non-linear relationships, was better suited for capturing abrupt changes in heavy metal concentration. It provided more accurate predictions during periods of rapid change. However, the overall performance was similar to ARIMA in terms of capturing the main trend and seasonal variations.
+
+- **Comparison Plot**: The plot below compares the predictions of ARIMA and LSTM against the actual heavy metal concentration values. Both models closely follow the actual trends, but LSTM shows a slight edge in accuracy, especially during rapid changes in concentration.
+
+![ARIMA vs. LSTM Comparison](plots/arima_vs_lstm_comparison.png)
+
+
+### Conclusion
+While both models demonstrated similar overall accuracy, the LSTM model's ability to handle non-linear relationships and rapid changes in data makes it a slightly better choice for this time series forecasting task. The combination of ARIMA and LSTM can also be considered for future work to leverage the strengths of both models.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
