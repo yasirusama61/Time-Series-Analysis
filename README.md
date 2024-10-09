@@ -78,29 +78,7 @@ PSO is a population-based optimization algorithm inspired by the social behavior
 
 ### Algorithm: Particle Swarm Optimization
 
-**Input**: Problem\(_{size}\), Population\(_{size}\)  
-**Output**: \( P_{g_{best}} \)
-
-1. Initialize Population ← 0  
-2. Initialize \( P_{g_{best}} \) ← 0  
-
-3. **For** \( i = 1 \) to Population\(_{size}\):  
-    - Initialize \( P_{velocity} \) ← Random Velocity()  
-    - Initialize \( P_{position} \) ← Random Position (Population\(_{size}\))  
-    - Set \( P_{p_{best}} \) ← \( P_{position} \)  
-    - **If** Cost(\( P_{p_{best}} \)) ≤ Cost(\( P_{g_{best}} \)):  
-        - Update \( P_{g_{best}} \) ← \( P_{p_{best}} \)  
-
-4. **While** (Stopping Criteria is not met):  
-    - **For each** Particle \( P \) in Population:  
-        - Update \( P_{velocity} \) ← Update Velocity(\( P_{velocity} \), \( P_{g_{best}} \), \( P_{p_{best}} \))  
-        - Update \( P_{position} \) ← Update Position(\( P_{position} \), \( P_{velocity} \))  
-        - **If** Cost(\( P_{p_{best}} \)) ≤ Cost(\( P_{g_{best}} \)):  
-            - Update \( P_{p_{best}} \) ← \( P_{position} \)  
-        - **If** Cost(\( P_{p_{best}} \)) ≤ Cost(\( P_{g_{best}} \)):  
-            - Update \( P_{g_{best}} \) ← \( P_{p_{best}} \)  
-
-5. **Return** \( P_{g_{best}} \)
+![PSO Algorithm](plots/pso_algorithm.png)
 
 ## Evaluation Metrics
 
