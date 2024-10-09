@@ -70,6 +70,38 @@ The data used in this project was provided by the third and consists of industri
 
 The original dataset is stored in the `data/heavy_metal_data.xlsx` file, and preprocessed data can be found in `data/processed_data.csv`.
 
+### Optimization Techniques
+
+#### Particle Swarm Optimization (PSO)
+
+PSO is a population-based optimization algorithm inspired by the social behavior of bird flocking or fish schooling. In PSO, each particle represents a potential solution and adjusts its position based on its own experience and that of neighboring particles.
+
+### Algorithm: Particle Swarm Optimization
+
+**Input**: Problem\(_{size}\), Population\(_{size}\)  
+**Output**: \( P_{g_{best}} \)
+
+1. Initialize Population ← 0  
+2. Initialize \( P_{g_{best}} \) ← 0  
+
+3. **For** \( i = 1 \) to Population\(_{size}\):  
+    - Initialize \( P_{velocity} \) ← Random Velocity()  
+    - Initialize \( P_{position} \) ← Random Position (Population\(_{size}\))  
+    - Set \( P_{p_{best}} \) ← \( P_{position} \)  
+    - **If** Cost(\( P_{p_{best}} \)) ≤ Cost(\( P_{g_{best}} \)):  
+        - Update \( P_{g_{best}} \) ← \( P_{p_{best}} \)  
+
+4. **While** (Stopping Criteria is not met):  
+    - **For each** Particle \( P \) in Population:  
+        - Update \( P_{velocity} \) ← Update Velocity(\( P_{velocity} \), \( P_{g_{best}} \), \( P_{p_{best}} \))  
+        - Update \( P_{position} \) ← Update Position(\( P_{position} \), \( P_{velocity} \))  
+        - **If** Cost(\( P_{p_{best}} \)) ≤ Cost(\( P_{g_{best}} \)):  
+            - Update \( P_{p_{best}} \) ← \( P_{position} \)  
+        - **If** Cost(\( P_{p_{best}} \)) ≤ Cost(\( P_{g_{best}} \)):  
+            - Update \( P_{g_{best}} \) ← \( P_{p_{best}} \)  
+
+5. **Return** \( P_{g_{best}} \)
+
 ## Evaluation Metrics
 
 The models are evaluated using the following metrics:
@@ -77,6 +109,8 @@ The models are evaluated using the following metrics:
    - Mean Absolute Error (MAE)
    - Mean Squared Logarithmic Error (MSLE)
    - R-Squared (R²)
+
+
 
 ## Results
 Results, including performance metrics and plots, are stored in the `results/` folder:
