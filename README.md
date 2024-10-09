@@ -88,8 +88,25 @@ Results, including performance metrics and plots, are stored in the `results/` f
    - **Batch Size Tuning**: Shows the effect of different batch sizes on RMSE.
    - **Block Number Tuning**: Illustrates the impact of varying the number of blocks in the hidden layer on RMSE.
 
+## Hyperparameter Optimization
+
 ![Batch Size Tuning](plots/batch_size_rmse.png)
 ![Block Number Tuning](plots/block_number_rmse.png)
+
+During the development of the LSTM model, hyperparameter tuning was performed to achieve the optimal settings for better prediction accuracy. The table below summarizes the optimal hyperparameter values used in the final model:
+
+| Hyperparameters                     | Optimal Settings |
+|-------------------------------------|------------------|
+| Number of Epochs                    | 500              |
+| Batch Size                          | 2                |
+| Number of Blocks per Hidden Layer   | 1                |
+| Dense Layer                         | 1                |
+| Learning Rate                       | 0.1              |
+| Dropout Ratio                       | 0.7              |
+| Optimizer                           | Adam             |
+| Activation Function                 | Hyperbolic Tangent|
+| Training Loss                       | 0.0153           |
+| Validation Loss                     | 0.0198           |
 
 ### LSTM Model Comparison
 
