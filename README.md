@@ -10,10 +10,25 @@ Below is a flowchart illustrating the stages of wastewater treatment and measure
 ![Wastewater Treatment Workflow](results/processflow.png)
 
 ## Models Implemented
+
 ### 1. **ARIMA (AutoRegressive Integrated Moving Average)**
-   - Utilized to model and forecast the heavy metal concentration time series.
-   - The ARIMA model was tuned using grid search for optimal parameters (p, d, q) to capture the underlying trend, seasonality, an residual components.
-   - Suitable for understanding the temporal dependencies in the data.
+   - Used to model and forecast heavy metal concentration in wastewater treatment.
+   - Model parameters were tuned using grid search to find the optimal p, d, q values.
+   - The following pseudocode illustrates the algorithmic approach:
+
+### Algorithm: AutoRegressive Integrated Moving Average (ARIMA)
+
+![ARIMA Algorithm](results/ARIMA_algorithm.png)
+
+   - Input: Time series data
+   - Output: Predicted future values
+
+   1. Identify the model parameters (p, d, q) using ACF and PACF plots
+   2. Perform differencing on the time series to make it stationary (if needed)
+   3. Fit the ARIMA model with the identified parameters
+   4. Generate forecasts using the fitted model
+   5. Evaluate model performance using error metrics like MSE, MAE
+
 
 ### 2. **PSO-LSTM (Particle Swarm Optimization - Long Short-Term Memory)**
    - A hybrid model combining LSTM networks for capturing long-term dependencies in time series data and PSO for optimizing model hyperparameters.
@@ -83,6 +98,8 @@ PSO is a population-based optimization algorithm inspired by the social behavior
 ### Algorithm: Particle Swarm Optimization
 
 ![PSO Algorithm](results/pso_algorithm.png)
+
+
 
 ## Evaluation Metrics
 
