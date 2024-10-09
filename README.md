@@ -85,6 +85,11 @@ Results, including performance metrics and plots, are stored in the `results/` f
    - **PSO-LSTM Performance**: Visualizations such as training loss curves and predicted vs. actual plots.
    - **Evaluation Metrics**: A file summarizing the MSE, MAE, and R² scores for both models.
    - **Sensitivity Analysis**: A plot showing the influential parameters identified through sensitivity analysis.
+   - **Batch Size Tuning**: Shows the effect of different batch sizes on RMSE.
+   - **Block Number Tuning**: Illustrates the impact of varying the number of blocks in the hidden layer on RMSE.
+
+![Batch Size Tuning](plots/batch_size_rmse.png)
+![Block Number Tuning](plots/block_number_rmse.png)
 
 ### Sensitivity Analysis Plot
 ![Sensitivity Analysis Plot](plots/sensitivity_analysis_plot.png)
