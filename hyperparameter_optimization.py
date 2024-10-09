@@ -34,12 +34,12 @@ session = tf.compat.v1.Session(config=config)
 
 # Load dataset
 df = pd.read_excel("202106有機自動加藥數據統計(新).xlsx", header=0, index_col=0)
-df = df[['銅在線濃度(mg/L)', 'OOO', 'pH', 'ph槽ORP', 'NaS_ORP', 'NaS', 'FeSO4']]
+df = df[['Heavy_metal_concentration', 'OOO', 'pH', 'ph槽ORP', 'NaS_ORP', 'Chemical_A', 'Chemical_B']]
 print(df.head())
 
 # Splitting features and target
 Y = df.iloc[:, 0]  # Target variable
-X = df[['OOO', 'pH', 'ph槽ORP', 'NaS_ORP', 'NaS', 'FeSO4']]  # Feature variables
+X = df[['OOO', 'pH', 'ph槽ORP', 'Chemical_A_ORP', 'Chemical_A', 'Chemical_B']]  # Feature variables
 
 # Train-test split
 Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.25, random_state=42)
