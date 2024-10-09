@@ -161,8 +161,6 @@ The figure below compares the predictions made by Univariate and Multivariate LS
 
 ![LSTM Comparison](results/lstm_comparison.png)
 
-### Sensitivity Analysis Plot
-![Sensitivity Analysis Plot](results/sensitivity_analysis_plot.png)
 
 ### ARIMA vs. LSTM Performance
 In this project, both ARIMA (AutoRegressive Integrated Moving Average) and LSTM (Long Short-Term Memory) models were employed to forecast the heavy metal concentration in wastewater. The results were compared to evaluate the effectiveness of each model in time series forecasting:
@@ -177,7 +175,7 @@ In this project, both ARIMA (AutoRegressive Integrated Moving Average) and LSTM 
 
 # Performance Metrics
 
-## Table 19. Predictive Index of Heavy Metal Concentration
+## Predictive Index of Heavy Metal Concentration
 
          | Methodology      | Prediction Average | Prediction MSE | Prediction MAE | Prediction MSLE | R Square |
          |------------------|--------------------|----------------|----------------|-----------------|----------|
@@ -191,7 +189,7 @@ In this project, both ARIMA (AutoRegressive Integrated Moving Average) and LSTM 
    - PSO-ARIMA performs better in terms of R² (90%) but shows a higher MSE and MSLE, suggesting that while it captures the trend well, its prediction errors may be larger than the LSTM models.
    - Univariate LSTM has the highest R² at 98%, indicating that it explains almost all the variability in the data. It also has the lowest MSLE, making it the best performer in terms of logarithmic error.
 
-## Table 18. Performance Metric of Comparison Between All Methods
+## Performance Metric of Comparison Between All Methods
 
          | Analytical Methods | Training MSE | Testing MSE | MAE   | MSLE   |
          |--------------------|--------------|-------------|-------|--------|
@@ -207,8 +205,37 @@ In this project, both ARIMA (AutoRegressive Integrated Moving Average) and LSTM 
 
 ![ Performance Metric Comparison](results/metrics.png)
 
+## Sensitivity Analysis
+
+The following plot shows the impact of different features on predicting heavy metal concentration, measured by the change in Mean Squared Error (MSE) when each feature is excluded:
+
+![Sensitivity Analysis Plot](results/sensitivity_analysis_plot.png)
+
+### Insights
+
+- **Key Influential Features:**
+  - **Electrical Conductivity** has the highest impact, with a change in MSE of approximately 0.35. This indicates that it is a crucial predictor and highly correlated with the heavy metal concentration.
+  - **Chemical A** is also significant, showing a change in MSE around 0.30. This suggests that its concentration or dosage greatly influences the prediction.
+
+- **Moderate Impact Features:**
+  - **pH_ORP** and **Chemical A_ORP** have a moderate effect on the prediction, with changes in MSE of approximately 0.22 and 0.15, respectively.
+  - **Chemical B** shows a change in MSE of about 0.18, indicating it is an important predictor but less impactful than the top factors.
+
+- **Less Influential Features:**
+  - **Heavy Metal Input concentration** and **pH** show smaller changes in MSE, around 0.12 and 0.08, respectively. While they still contribute to the prediction, their impact is comparatively lower.
+
+### Recommendations
+
+- **Focus on Key Features:** Given the significant influence of electrical conductivity and Chemical A, these variables should be prioritized for monitoring and control to improve predictive accuracy.
+- **Feature Engineering:** Consider adding interaction terms or derived features involving electrical conductivity, Chemical A, and pH_ORP to better capture complex relationships.
+- **Further Investigation:** Explore why features like Heavy Metal Input concentration and pH have a lower impact, as this could reveal additional insights into the process.
+
+These insights can guide the selection and engineering of features to enhance the model's predictive performance.
+
 ### Conclusion
-While both models demonstrated similar overall accuracy, the LSTM model's ability to handle non-linear relationships and rapid changes in data makes it a slightly better choice for this time series forecasting task. The combination of ARIMA and LSTM can also be considered for future work to leverage the strengths of both models.
+While both models demonstrated similar overall accuracy, the LSTM model's ability to handle non-linear relationships and rapid changes in data makes it a slightly better choice for this time series forecasting task. The sensitivity analysis revealed that certain features, such as electrical conductivity and Chemical A concentration, have a significant impact on the prediction of heavy metal concentration. These findings suggest that focusing on the most influential features could further improve model accuracy. Incorporating interaction terms or engineered features based on these key variables may also enhance predictive performance.
+
+For future work, combining the strengths of ARIMA and LSTM could be a promising approach. While ARIMA is effective for modeling linear trends and seasonality, LSTM excels in capturing complex patterns and sudden changes. A hybrid model leveraging these complementary strengths, along with the insights gained from sensitivity analysis, may yield even better forecasting results.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
