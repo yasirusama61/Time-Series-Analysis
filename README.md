@@ -5,6 +5,10 @@ This repository contains the code and data for a time series forecasting project
 
 The goal of this project is to develop robust predictive models to optimize wastewater treatment processes, enabling better control of heavy metal removal and improving overall operational efficiency.
 
+Below is a flowchart illustrating the stages of wastewater treatment and measurement:
+
+![Wastewater Treatment Workflow](processflow.png)
+
 ## Models Implemented
 ### 1. **ARIMA (AutoRegressive Integrated Moving Average)**
    - Utilized to model and forecast the heavy metal concentration time series.
