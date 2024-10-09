@@ -237,6 +237,32 @@ While both models demonstrated similar overall accuracy, the LSTM model's abilit
 
 For future work, combining the strengths of ARIMA and LSTM could be a promising approach. While ARIMA is effective for modeling linear trends and seasonality, LSTM excels in capturing complex patterns and sudden changes. A hybrid model leveraging these complementary strengths, along with the insights gained from sensitivity analysis, may yield even better forecasting results.
 
+## Recommendations for Real-World Application
+
+The PSO-LSTM model can be effectively used in industrial wastewater treatment to optimize processes and enhance decision-making. Here are some key recommendations:
+
+### 1. **Real-Time Monitoring and Control**
+   - **Integration with Monitoring Systems:** Use the model for real-time predictions of heavy metal concentrations to dynamically adjust treatment parameters, such as chemical dosage and flow rate.
+   - **Automated Control Systems:** Enable automated process adjustments to maintain compliance with environmental standards and optimize treatment efficiency.
+
+### 2. **Early Warning System**
+   - **Anomaly Detection:** Identify unexpected spikes in heavy metal levels to prevent potential regulatory violations or equipment failures.
+   - **Compliance Monitoring:** Predict when heavy metal concentrations approach regulatory limits and take preventive action.
+
+### 3. **Optimizing Chemical Usage**
+   - **Predictive Dosing Optimization:** Forecast the necessary chemical dosage to maintain target heavy metal levels, reducing chemical costs.
+   - **Focus on Key Influencers:** Utilize sensitivity analysis results to prioritize influential parameters (e.g., electrical conductivity) for better control.
+
+### 4. **Scenario Analysis**
+   - **Simulate Operating Conditions:** Evaluate the impact of different treatment strategies and operating conditions on heavy metal removal efficiency.
+   - **Assess Upgrades:** Predict the effects of potential system upgrades or changes in the treatment process.
+
+### 5. **Deployment Considerations**
+   - **Model Retraining:** Periodically update the model with new data to maintain accuracy.
+   - **Cloud vs. Edge Deployment:** Choose deployment based on latency requirements—cloud for centralized processing or edge for faster local predictions.
+
+These recommendations help guide the practical use of the PSO-LSTM model for optimizing wastewater treatment and ensuring compliance with regulatory standards.
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
