@@ -78,7 +78,7 @@ PSO is a population-based optimization algorithm inspired by the social behavior
 
 ### Algorithm: Particle Swarm Optimization
 
-![PSO Algorithm](plots/pso_algorithm.png)
+![PSO Algorithm](plots/pso_algorithm.jpg)
 
 ## Evaluation Metrics
 
