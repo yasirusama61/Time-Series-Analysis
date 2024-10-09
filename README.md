@@ -91,6 +91,12 @@ Results, including performance metrics and plots, are stored in the `results/` f
 ![Batch Size Tuning](plots/batch_size_rmse.png)
 ![Block Number Tuning](plots/block_number_rmse.png)
 
+### LSTM Model Comparison
+
+The figure below compares the predictions made by Univariate and Multivariate LSTM models against the actual heavy metal concentration.
+
+![LSTM Comparison](plots/lstm_comparison.png)
+
 ### Sensitivity Analysis Plot
 ![Sensitivity Analysis Plot](plots/sensitivity_analysis_plot.png)
 
