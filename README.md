@@ -7,7 +7,7 @@ The goal of this project is to develop robust predictive models to optimize wast
 
 Below is a flowchart illustrating the stages of wastewater treatment and measurement:
 
-![Wastewater Treatment Workflow](processflow.png)
+![Wastewater Treatment Workflow](results/processflow.png)
 
 ## Models Implemented
 ### 1. **ARIMA (AutoRegressive Integrated Moving Average)**
