@@ -36,25 +36,43 @@ Below is a flowchart illustrating the stages of wastewater treatment and measure
 
 ## Repository Structure
       time-series-forecasting/
-      ├── data/                          # Data folder for raw and preprocessed datasets
-      │   ├── heavy_metal_data.xlsx      # Raw dataset of heavy metal concentrations
-      │   └── processed_data.csv         # Preprocessed data for modeling
-      ├── scripts/                       # Scripts for data preprocessing, modeling, and evaluation
-      │   ├── arima_model.py             # Script for ARIMA time series forecasting
-      │   ├── pso_lstm_model.py          # Script for PSO-LSTM model training
-      │   ├── data_preprocessing.py      # Script for cleaning and preprocessing data
-      │   └── hyperparameter_optimization.py # Script for optimizing hyperparameters
-      ├── models/                        # Folder for saving trained models
-      │   ├── arima_model.pkl            # Saved ARIMA model
-      │   └── pso_lstm_model.h5          # Trained PSO-LSTM model
-      ├── results/                       # Results like plots, metrics, and logs
-      │   ├── arima_forecast_plot.png    # Visualization of ARIMA forecast
-      │   ├── pso_lstm_loss_curve.png    # Loss curve for PSO-LSTM training
-      │   ├── heavy_metal_prediction.png # Plot comparing predicted vs actual concentrations
-      │   └── metrics.txt                # Performance metrics (e.g., MSE, MAE)
-      ├── requirements.txt               # Python dependencies
-      └── README.md                      # Project overview and instructions
-
+      ├── .github/                         # GitHub Actions workflows for CI/CD (if applicable)
+      │   └── workflows/
+      │       └── python-package.yml       # Workflow for testing and building Python packages
+      ├── data/                            # Data folder for raw and preprocessed datasets
+      │   ├── heavy_metal_data.xlsx        # Placeholder for raw dataset (not publicly available)
+      │   └── processed_data.csv           # Preprocessed data used for modeling (not included)
+      ├── scripts/                         # Scripts for data processing, modeling, and evaluation
+      │   ├── arima_model.py               # Script for ARIMA time series forecasting
+      │   ├── train_lstm.py                # Script for training LSTM model
+      │   ├── pso_lstm_model.py            # Script for PSO-LSTM model training
+      │   ├── hyperparameter_optimization.py # Script for optimizing hyperparameters using PSO
+      │   ├── learning_rate_hidden_layer_tuning.py # Script for tuning LSTM hyperparameters
+      │   ├── preprocess_data.py           # Script for data cleaning and preprocessing
+      │   ├── sensitivity_analysis.py      # Script for sensitivity analysis
+      │   ├── var.py                       # Script for Vector Autoregression (VAR) analysis
+      │   ├── test.py                      # Unit tests for the project
+      │   └── furniture_sales_arima.py     # Additional ARIMA example using sales data
+      ├── models/                          # Folder for saving trained models
+      │   ├── arima_model.pkl              # Saved ARIMA model
+      │   └── pso_lstm_model.h5            # Trained PSO-LSTM model
+      ├── results/                         # Results such as plots, metrics, pseudocode, and logs
+      │   ├── ARIMA_algorithm.png          # Pseudocode for ARIMA
+      │   ├── arima_vs_lstm_comparison.png # Plot comparing ARIMA and LSTM predictions
+      │   ├── batch_size_rmse.png          # Plot showing effect of batch size on RMSE
+      │   ├── block_number_rmse.png        # Plot illustrating block number tuning for RMSE
+      │   ├── lstm_comparison.png          # LSTM model comparison plot
+      │   ├── metrics.png                  # Heatmap of performance metrics (e.g., MSE, MAE, R²)
+      │   ├── processflow.png              # Visualization of the process flow
+      │   ├── pso_algorithm.png            # Pseudocode for PSO algorithm
+      │   ├── pso_lstm_loss_curve.png      # Loss curve for PSO-LSTM training
+      │   └── sensitivity_analysis_plot.png # Plot showing feature sensitivity analysis
+      ├── notebooks/                       # Jupyter notebooks for analysis and documentation
+      │   ├── Tune_the_parameters_of_SVM_using_PSO.ipynb # Notebook for PSO-SVM tuning
+      │   └── other_notebooks.ipynb        # Other analysis or tutorial notebooks
+      ├── README.md                        # Project overview and instructions
+      ├── requirements.txt                 # Python dependencies
+      └── LICENSE                          # License for the project (if applicable)
 
 ## How to Run the Code
 1. Clone the repository:
