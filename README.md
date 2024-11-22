@@ -1,8 +1,8 @@
 # 🌊 Time Series Analysis Using Machine Learning  
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)  
-![License: MIT](https://img.shields.io/badge/License-MIT-green?logo=license)  
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)  
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white) 
+![License: MIT](https://img.shields.io/badge/License-MIT-green?logo=license) 
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen) 
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-November%202024-orange)  
 
 ---
