@@ -1,12 +1,17 @@
-# 🌊 Time Series Analysis Using Machine Learning
+# 🌊 Time Series Analysis Using Machine Learning  
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)  
+![License: MIT](https://img.shields.io/badge/License-MIT-green?logo=license)  
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)  
+![Last Updated](https://img.shields.io/badge/Last%20Updated-November%202024-orange)  
 
 ---
 
 ## 📌 Project Overview
 This repository focuses on predicting **heavy metal concentrations** in industrial wastewater using **time series forecasting**. Models like **ARIMA** and **PSO-LSTM** combine statistical and machine learning techniques to:
 
-- Forecast heavy metal levels based on features like **pH**, **chemical dosage**, **redox potential**, and **conductivity**.
-- Optimize wastewater treatment for better efficiency and control.
+- 🔍 Forecast heavy metal levels based on features like **pH**, **chemical dosage**, **redox potential**, and **conductivity**.  
+- ⚙️ Optimize wastewater treatment for better efficiency and control.
 
 ### 🎯 Goal
 Build reliable models to improve wastewater treatment processes and operational performance.
